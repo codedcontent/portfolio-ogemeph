@@ -22,7 +22,7 @@ const LeftSide = () => {
     downloadLink.href = resumeUrl;
 
     // Set the download attribute to specify the desired file name
-    downloadLink.download = "your-file-name.ext";
+    downloadLink.download = "CV-Resume.pdf";
 
     // Simulate a click on the link to trigger the download
     downloadLink.click();
@@ -57,7 +57,15 @@ const LeftSide = () => {
           amazing.
         </p>
 
-        <MaxWidthButton text="Download my resume" onClick={downloadResume} />
+        <Link
+          passHref
+          href="/CV-Resume.pdf"
+          download={true}
+          target="_blank"
+          className="w-full bg-primary hover:bg-primary/80 text-white font-bold py-2.5 px-4 rounded uppercase"
+        >
+          Download my CV
+        </Link>
 
         {/* Social Media Locations */}
         <div className="mt-8 flex justify-center flex-col">

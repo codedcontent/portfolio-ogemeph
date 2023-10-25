@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const ContactMeForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Function to handle form change
   const handleFormChange = (type: string, value: string) => {
@@ -12,10 +13,30 @@ const ContactMeForm = () => {
   };
 
   // Function to handle submit
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    alert("Form submitted");
+    if (form.email && form.message && form.name) {
+      setIsSubmitting(true);
+
+      try {
+        const response = await fetch("/api/mailer", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        });
+
+        alert("Message sent successfully.");
+      } catch (error) {
+        console.log({ error });
+      } finally {
+        setIsSubmitting(false);
+      }
+    } else {
+      alert("Please fill required inputs");
+    }
   };
 
   return (
@@ -49,7 +70,7 @@ const ContactMeForm = () => {
         className="w-full bg-primary hover:bg-primary/80 text-white font-bold py-2.5 px-4 rounded uppercase"
         type="submit"
       >
-        Send
+        {isSubmitting ? <p>Loading...</p> : <span>Send</span>}
       </button>
     </form>
   );
