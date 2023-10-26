@@ -20,7 +20,7 @@ type Props = {
 };
 
 const MyTechSkills = ({ title }: Props) => {
-  const iconStyle = "text-3xl";
+  const iconStyle = "md:text-3xl text-2xl";
 
   const icon =
     title === "HTML" ? (
@@ -58,10 +58,10 @@ const MyTechSkills = ({ title }: Props) => {
     ) : null;
 
   return (
-    <div className="flex flex-col items-center justify-center bg-primary p-3 rounded-md w-full text-white">
+    <div className="flex flex-col items-center justify-center bg-primary p-3 mg:gap-0 gap-1 rounded-md w-full text-white">
       <div>{icon}</div>
 
-      <p className="font-light text-lg">{title}</p>
+      <p className="font-light md:text-lg text-sm">{title}</p>
     </div>
   );
 };
