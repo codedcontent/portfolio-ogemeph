@@ -3,7 +3,7 @@ import MyTechSkills from "@/components/common/MyTechSkills";
 
 const About = () => {
   return (
-    <div className="mt-16" id="about">
+    <div id="about">
       <p className="font-black text-lg uppercase">About me</p>
 
       <div className="space-y-4">

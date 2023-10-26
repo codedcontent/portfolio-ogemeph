@@ -34,22 +34,24 @@ const LeftSide = () => {
   };
 
   return (
-    <div className="h-full w-1/2 px-4 sm:px-6 lg:px-24 lg:py-10 flex flex-col justify-between">
-      <TopNav />
+    <div className="md:h-screen h-full md:w-1/2 w-full px-6 lg:px-24 lg:py-10 flex flex-col justify-between">
+      <div className="hidden md:block">
+        <TopNav />
+      </div>
 
       {/* Main content */}
-      <div className="w-11/12 py-4">
+      <div className="w-full py-4">
         {/* Greeting && Intro */}
         <div className="-space-y-1">
           <p className="text-base font-bold">Hi there 👋🏿</p>
 
-          <p className="font-bold text-7xl">
+          <p className="font-bold md:text-6xl text-5xl">
             I am <span className="text-primary">Oge.</span>
           </p>
         </div>
 
         {/* Short message about my professional work */}
-        <p className="font-light text-lg my-4">
+        <p className="font-light text-lg mt-2 mb-5">
           I&apos;m a <span className="text-primary">Software Engineer</span> and
           i&apos;m passionate about making things work on the internet. I design
           and build websites that are functional and look great as well. I am
@@ -69,17 +71,17 @@ const LeftSide = () => {
 
         {/* Social Media Locations */}
         <div className="mt-8 flex justify-center flex-col">
-          <p className="font-medium text-lg">You can find me here:</p>
+          <p className="font-medium md:text-lg">You can find me here:</p>
 
           {/* Social icons */}
-          <div className="flex gap-4 mt-2">
+          <div className="flex gap-4 mt-2 flex-wrap items-center">
             <Link
               target="_blank"
               href="https://twitter.com/@i_am_meph"
               className="flex flex-col gap-1 justify-center items-center"
             >
-              <FaTwitter className="text-3xl cursor-pointer text-secondary" />
-              <p className="font-medium text-sm">Twitter</p>
+              <FaTwitter className="md:text-3xl text-2xl cursor-pointer text-secondary" />
+              <p className="font-medium md:text-sm text-xs">Twitter</p>
             </Link>
 
             <Link
@@ -87,8 +89,8 @@ const LeftSide = () => {
               href="https://instagram.com/i.am.meph"
               className="flex flex-col gap-1 justify-center items-center"
             >
-              <FaInstagram className="text-3xl cursor-pointer text-secondary" />
-              <p className="font-medium text-sm">Instagram</p>
+              <FaInstagram className="md:text-3xl text-2xl cursor-pointer text-secondary" />
+              <p className="font-medium md:text-sm text-xs">Instagram</p>
             </Link>
 
             <Link
@@ -96,8 +98,8 @@ const LeftSide = () => {
               href="https://www.linkedin.com/in/ogeme/"
               className="flex flex-col gap-1 justify-center items-center"
             >
-              <FaLinkedin className="text-3xl cursor-pointer text-secondary" />
-              <p className="font-medium text-sm">LinkedIn</p>
+              <FaLinkedin className="md:text-3xl text-2xl cursor-pointer text-secondary" />
+              <p className="font-medium md:text-sm text-xs">LinkedIn</p>
             </Link>
 
             <Link
@@ -105,8 +107,8 @@ const LeftSide = () => {
               href="https://www.github.com/codedcontent"
               className="flex flex-col gap-1 justify-center items-center"
             >
-              <FaGithub className="text-3xl cursor-pointer text-secondary" />
-              <p className="font-medium text-sm">GitHub</p>
+              <FaGithub className="md:text-3xl text-2xl cursor-pointer text-secondary" />
+              <p className="font-medium md:text-sm text-xs">GitHub</p>
             </Link>
 
             <Link
@@ -114,15 +116,17 @@ const LeftSide = () => {
               href="https://www.youtube.com/@techwithoge6899"
               className="flex flex-col gap-1 justify-center items-center"
             >
-              <FaYoutube className="text-3xl cursor-pointer text-secondary" />
-              <p className="font-medium text-sm">Youtube</p>
+              <FaYoutube className="md:text-3xl text-2xl cursor-pointer text-secondary" />
+              <p className="font-medium md:text-sm text-xs">Youtube</p>
             </Link>
           </div>
         </div>
       </div>
 
       {/* Buy me coffee */}
-      <CoffeeButton onClick={buyMeCoffee} />
+      <div className="md:my-0 my-8">
+        <CoffeeButton onClick={buyMeCoffee} />
+      </div>
     </div>
   );
 };

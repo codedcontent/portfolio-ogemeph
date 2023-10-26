@@ -59,7 +59,7 @@ const ContactMeForm = () => {
 
       {/* Message */}
       <textarea
-        className="border-2 border-primary py-2 px-10 w-full outline-none placeholder:italic placeholder:font-light"
+        className="border-2 border-primary py-3 px-4 w-full outline-none rounded-lg text-sm placeholder:font-light min-h-[150px]"
         placeholder="What could this be about?"
         onChange={(e) => handleFormChange("message", e.target.value)}
         value={form.message}

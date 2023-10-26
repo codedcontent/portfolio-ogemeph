@@ -2,10 +2,9 @@
 import React from "react";
 import ContactMeForm from "./ContactMeForm";
 
-
 const ContactMe = () => {
   return (
-    <div className="mt-16 w-full" id="contact">
+    <div className="w-full" id="contact">
       <p className="font-black text-lg uppercase">Let's talk, shall we?</p>
 
       <div className="my-4">
