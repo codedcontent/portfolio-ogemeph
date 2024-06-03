@@ -3,13 +3,6 @@ import ProjectInfo from "./ProjectInfo";
 const Projects = () => {
   const myProjects = [
     {
-      title: "RelationsPilot",
-      desc: "RelationsPilot is a service I built for myself to help me continuously improve me interpersonal relationships with family and loved ones",
-      code: "https://github.com/codedcontent/relations-pilot-frontend",
-      site: "https://relationspilot.netlify.app/",
-      placeholderImg: "/assets/RelationsPilot.png",
-    },
-    {
       title: "Weather Buddy",
       desc: "Weather Buddy is an app that helps you Stay Ahead of Mother Nature.",
       code: "https://github.com/codedcontent/weather-buddy",
@@ -22,6 +15,13 @@ const Projects = () => {
       code: "https://github.com/codedcontent/tournaments-io-web-app",
       site: "https://tournaments-io.web.app",
       placeholderImg: "/assets/tournaments-io.png",
+    },
+    {
+      title: "RelationsPilot",
+      desc: "RelationsPilot is a service I built for myself to help me continuously improve me interpersonal relationships with family and loved ones",
+      code: "https://github.com/codedcontent/relations-pilot-frontend",
+      site: "https://relationspilot.netlify.app/",
+      placeholderImg: "/assets/RelationsPilot.png",
     },
     {
       title: "BUQD",
