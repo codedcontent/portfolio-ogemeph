@@ -58,10 +58,10 @@ const MyTechSkills = ({ title }: Props) => {
     ) : null;
 
   return (
-    <div className="flex flex-col items-center justify-center bg-primary p-3 mg:gap-0 gap-1 rounded-md w-full text-white">
+    <div className="flex flex-col items-center justify-center bg-primary py-5 mg:gap-0 gap-1 rounded-md w-full text-white">
       <div>{icon}</div>
 
-      <p className="font-light md:text-lg text-sm">{title}</p>
+      <p className="font-light text-sm">{title}</p>
     </div>
   );
 };

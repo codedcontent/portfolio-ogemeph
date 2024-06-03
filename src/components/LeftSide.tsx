@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import React from "react";
@@ -51,22 +52,19 @@ const LeftSide = () => {
         </div>
 
         {/* Short message about my professional work */}
-        <p className="font-light text-lg mt-2 mb-5">
-          I&apos;m a <span className="text-primary">Software Engineer</span> and
-          i&apos;m passionate about making things work on the internet. I design
-          and build websites that are functional and look great as well. I am
-          always eager to learn and take on new challenges to create something
-          amazing.
+        <p className="font-light text-lg my-4">
+          I'm a <span className="text-primary">Full-stack developer</span> and I
+          also happen to like doing this thing called Data Science, so yeah, I'm
+          a <span className="text-primary">Data Scientist</span> as well. I
+          build the ideas I have in my head because I can, It's more
+          exhilarating that way.
         </p>
 
         <Link
-          passHref
-          href="/CV-Resume.pdf"
-          download={true}
-          target="_blank"
+          href="#about"
           className="w-full bg-primary hover:bg-primary/80 text-white font-bold py-2.5 px-4 rounded uppercase"
         >
-          Download my CV
+          More about me
         </Link>
 
         {/* Social Media Locations */}
@@ -123,7 +121,7 @@ const LeftSide = () => {
         </div>
       </div>
 
-      {/* Buy me coffee */}
+      {/* Other stuff I do */}
       <div className="md:my-0 my-8">
         <CoffeeButton onClick={buyMeCoffee} />
       </div>

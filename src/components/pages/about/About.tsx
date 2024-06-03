@@ -3,29 +3,24 @@ import MyTechSkills from "@/components/common/MyTechSkills";
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="pt-5">
       <p className="font-black text-lg uppercase">About me</p>
 
       <div className="space-y-4">
         <p className="font-light">
-          I am Ogechukwu Mephors, a Software Engineer specializing in Next.js,
-          TypeScript, React.js, and Tailwind CSS. I have a passion for turning
+          I am Ogechukwu Mephors, a Fullstack Developer and Data Scientist
+          specializing in Next.js, TypeScript, React.js, and TailwindCSS on the
+          Web Development side - Data Analysis, Machine Learning as well as Data
+          Processing on the Data Science side. I have a passion for turning
           ideas into user-friendly software that anyone can use. When I'm not
-          coding, I might be watching anime, gyming, or reading a book.
-        </p>
-
-        <p className="font-light">
-          I've got a mix of skills - techie stuff and a love for creative
-          storytelling. Join me on a digital adventure where we blend code,
-          creativity, and communication to make a real impact in the digital
-          world
+          coding, I might be watching anime, at the gym, or reading a book.
         </p>
       </div>
 
       <p className="font-bold my-4">Technologies I currently work with:</p>
 
       {/* List of technologies */}
-      <div className="w-full grid grid-cols-4 gap-2">
+      <div className="w-full grid md:grid-cols-4 grid-cols-3 gap-5 gap-x-10">
         <MyTechSkills title="HTML" />
         <MyTechSkills title="CSS" />
         <MyTechSkills title="JavaScript" />
